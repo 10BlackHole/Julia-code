@@ -19,7 +19,7 @@ Zr2 = @. abs(g2(z));
 Zr4 = @. abs(g4(z));
 
 # Creamos el grafico
-fig, ax = cubplots()
+fig, ax = subplots()
 ax.contour(x, y, Zr2', levels=[1], colors="blue")
 ax.contour(x, y, Zr4', levels=[1], colors="red")
 annotate("RK2", xy=[-2.4;0])
@@ -28,4 +28,4 @@ axis([-3,3,-3,3])
 title("Regiones de estabilidad")
 xlabel("Re(z)")
 ylabel("Im(z)")
-
+savefig("fig-estabilidad-RK.pdf")
